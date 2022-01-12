@@ -8,10 +8,12 @@
 body {
   font-family: 'Rubik', sans-serif;
 }
+* {
+  overflow-x: hidden;
+}
 
 /* | COMMON */
 .container {
-  max-width: 375px;
   margin: 0 auto;
 }
 .row {}
@@ -33,12 +35,8 @@ body {
 }
 
 .module {
-  max-width: 435px;
-
-  margin: 20px auto;
-
-
   background-color: white;
+
   border-radius: 7px;
 
   .comment {
@@ -47,22 +45,27 @@ body {
     &__row {
       display: flex;
       align-items: stretch;
-      gap: 20px;
     }
       &__sidebar {
+        flex: 0 1 15%;
+
         display: flex;
         flex-direction: column;
       }
         &__avatar {
-            flex: 0 1 100%;
+            flex: 0 0 100%;
+            
             display: flex;
             flex-direction: column;
           img {
             max-width: 100%;
+            display: none;
+            
           }
 
           &::after {
             content:'';
+
             align-self: center;
 
             height: 100%;
@@ -76,7 +79,9 @@ body {
         &__line {}
 
       
-      &__main {}
+      &__main {
+        flex: 0 1 85%;
+      }
         &__body {}
           &__headline {
             display: flex;
@@ -86,25 +91,50 @@ body {
             margin: 0px 0px 15px 0;
 
 
-            font-weight: bold;
           }
-            &__username {}
+          &__username {
+            font-weight: bold;
+            }
             &__time {
-              opacity: 0.6;
+              color: darkgray;
             }
 
           &__content {
             margin: 0px 0px 30px 0;
+
+
+            line-height: 22px;
+            white-space: normal;
           }
 
-          &__panel {
-            max-width: 200px;
+          /* || PANEL */
+          .panel {
             display: flex;
             justify-content: space-between;
+            flex-wrap: wrap;
             gap: 18px;
+            
+            max-width: 200px;
+
+            /* || RATE */
+            .rate-btn {
+              display: inline-block;
+
+              width: 17px;
 
 
-            font-size: 1rem;
+              background-color: white;
+
+              img {
+                max-width: 100%;
+              }
+            }
+            .rate-num {
+              display: inline-block;
+
+
+              font-weight: bold;
+            }
           }
   }
 }
