@@ -15,6 +15,14 @@ body {
   max-width: $w-mobile;
   margin: 0 auto;
   padding: 0 5px;
+
+  @media (min-width: 530px) {
+    max-width: min(80%, 612px);
+  }
+
+  @media (min-width: $w-tablet) {
+    max-width: 612px;
+  }
 }
 
 /* | MAIN */
@@ -44,6 +52,14 @@ body {
     margin: min(3.5%, 40px) auto;
 
     border-radius: 15px;
+  }
+
+  @media (min-width: $w-tablet) {
+    max-width: 720px;
+  }
+
+  @media (min-width: 530px) {
+    max-width: min(81.26%, 720px);
   }
 
   .comment {
