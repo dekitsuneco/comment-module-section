@@ -35,15 +35,15 @@ body {
 .module {
   max-width: $w-mobile-big;
   margin: 0 auto;
-  padding: 0px 0px 35px 0;
+  padding: 15px 0px 100px 0;
   
 
   background-color: white;
 
   @media (min-width: $w-mobile-big) {
-    margin: min(3%, 30px) auto;
+    margin: min(3.5%, 40px) auto;
 
-    border-radius: 7px;
+    border-radius: 15px;
   }
 
   .comment {
