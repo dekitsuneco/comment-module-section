@@ -8,13 +8,12 @@
 body {
   font-family: 'Rubik', sans-serif;
 }
-* {
-  overflow-x: hidden;
-}
+
 
 /* | COMMON */
 .container {
   margin: 0 auto;
+  padding: 0 5px;
 }
 .row {}
 .col {}
@@ -37,10 +36,10 @@ body {
 .module {
   background-color: white;
 
-  border-radius: 7px;
+  padding-bottom: 35px;
 
   .comment {
-    padding: 35px 0;
+    padding: 35px 0 0 0;
 
     &__row {
       display: flex;
@@ -82,7 +81,9 @@ body {
       &__main {
         flex: 0 1 85%;
       }
-        &__body {}
+        &__body {
+          word-break: break-all;
+        }
           &__headline {
             display: flex;
             flex-wrap: wrap;
